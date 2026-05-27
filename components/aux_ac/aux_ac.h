@@ -3790,8 +3790,10 @@ namespace esphome
                 _traits.set_supported_modes(this->_supported_modes);
                 _traits.set_supported_swing_modes(this->_supported_swing_modes);
                 _traits.set_supported_presets(this->_supported_presets);
-                _traits.set_supported_custom_presets(this->_supported_custom_presets);
-                _traits.set_supported_custom_fan_modes(this->_supported_custom_fan_modes);
+                //_traits.set_supported_custom_presets(this->_supported_custom_presets);
+                //_traits.set_supported_custom_fan_modes(this->_supported_custom_fan_modes);
+                this->set_supported_custom_presets(this->_supported_custom_presets);
+                this->set_supported_custom_fan_modes(this->_supported_custom_fan_modes);                
 
                 // tells the frontend what range of temperatures the climate device should display (gauge min/max values)
                 // TODO: GK: а вот здесь похоже неправильно. Похоже, так мы не сможем выставить в конфиге свой диапазон температур - всегда будет от AC_MIN_TEMPERATURE до AC_MAX_TEMPERATURE
